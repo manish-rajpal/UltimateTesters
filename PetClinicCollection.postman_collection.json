@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "17b869e4-71ee-4864-ad96-8f2ccab516a9",
+		"name": "PetClinicCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "AuthLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 201;\r",
+									"pm.test(\"Test 1:Status check Page response is  201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"\r",
+									"//pm.test(\"Status code is 201\", function () {   pm.response.to.have.status(201); });\r",
+									"\r",
+									"\r",
+									"pm.test(\"Test2 :Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true,\r\n  \"password\": \"string\",\r\n  \"roles\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"username\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/users",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Owner",
+			"item": [
+				{
+					"name": "getOwners",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 200;\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 2 :Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"    });\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"console.log(response);\r",
+									"console.log(response.length);\r",
+									"console.log(response['response.length']);\r",
+									"\r",
+									"pm.test(\"Test3 : Total No of Entries Displayed  : \" +response.length , function () {\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.expect(jsonData.length).to.eql(response.length);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/owners",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOwnerById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 200;\r",
+									"\r",
+									"pm.test(\"Successful POST request\", () => {\r",
+									"  pm.expect(pm.response.code).to.be.oneOf([200,201,202]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 3 :Response time is less than 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"    });\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"console.log(response);\r",
+									"console.log(responseTime)\r",
+									"console.log(response['response.length']);\r",
+									"\r",
+									"pm.test(\"Test2 : How many milliseconds does the page respond in => \" +responseTime, function () {\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.expect(jsonData.length).to.eql(response.length);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{petclinicUrl}}api/owners/{{ownerid}}",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"owners",
+								"{{ownerid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addOwner",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 201;\r",
+									"pm.test(\"Test 1:Details updated, Response for update is 201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test2 :Page response time is less than 500ms\", function () { pm.expect(pm.response.responseTime).to.be.below(500); });\r",
+									"\r",
+									"pm.test(\"Status code name has string\", () => {\r",
+									"  pm.response.to.have.status(\"Created\");\r",
+									"});\r",
+									"\r",
+									" \r",
+									"var url = pm.environment.get(\"url\") + \"/api/owners\" +  pm.globals.get(\"id\");\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.globals.set(\"ownerID\", pm.response.json().ownerId);\r",
+									" \r",
+									"pm.test(\"first name updated as provided \", function () {\r",
+									"    pm.expect(jsonData.firstName).to.eql(pm.variables.get(\"firstname\"));\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Verify that lastname in the Owner is correct \", function () {\r",
+									"    pm.expect(jsonData.lastName).to.eql(pm.variables.get(\"lastname\"));\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Verify that address in the Owner is correct \", function () {\r",
+									"    pm.expect(jsonData.address).to.eql(pm.variables.get(\"address\"));\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Verify that city in the Owner is correct \", function () {\r",
+									"    pm.expect(jsonData.city).to.eql(pm.variables.get(\"city\"));\r",
+									"});\r",
+									"\r",
+									"pm.sendRequest(getRequest, function (err, res){\r",
+									"    if (err) { \r",
+									"        console.log(err);\r",
+									"    }\r",
+									"    console.log(res);\r",
+									" \r",
+									"    pm.test(\"Test 3 :All required data  that is provided is updated .Verify that the booking is not empty\", function () {\r",
+									"        pm.expect(res).to.not.eql(\"\");\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"firstName\": \"{{firstname}}\",\r\n    \"lastName\": \"{{lastname}}\",\r\n    \"address\": \"{{address}}\",\r\n    \"city\": \"{{city}}\",\r\n    \"telephone\": \"{{mobilenumber}}\"\r\n    \r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/owners",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"owners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckaddedOwner",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 200;\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 3 :Response time is less than 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"    });\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"console.log(response);\r",
+									"console.log(responseTime)\r",
+									"console.log(response['response.length']);\r",
+									"\r",
+									"pm.test(\"Test2 : How many milliseconds does the page respond in => \" +responseTime, function () {\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.expect(jsonData.length).to.eql(response.length);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{petclinicUrl}}api/owners/{{ownerid}}",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"owners",
+								"{{ownerid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOwner",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 204;\r",
+									"pm.test(\"Test 1:Status check Page response is  201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									" \r",
+									"pm.test(\"Test2 :Response time is less than 500ms\", function () { pm.expect(pm.response.responseTime).to.be.below(500); });\r",
+									" \r",
+									"var url = pm.environment.get(\"petclinicUrl\") + \"api/owners/\" +  parseInt(pm.environment.get(\"ownerid\"));\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET' };\r",
+									" \r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err); }\r",
+									"    console.log(res.firstName);\r",
+									" \r",
+									"    pm.test(\"Test 3: Verify that the json data is not empty\", function () { pm.expect(res).to.not.eql(\"\"); });\r",
+									" \r",
+									"    var jsonData = res.json();\r",
+									"    pm.test(\"Test 4: Check firstname is updated\", function () {\r",
+									"    pm.expect(jsonData.firstName).to.eql(pm.variables.get(\"firstname\"))\r",
+									"    });\r",
+									" \r",
+									"    pm.test(\"Test 5: Check lastname is updated\", function () {\r",
+									"    pm.expect(jsonData.lastName).to.eql(pm.variables.get(\"lastname\"))\r",
+									"    });\r",
+									" \r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"firstName\": \"{{firstname}}\",\r\n    \"lastName\": \"{{lastname}}\",\r\n    \"address\": \"563 Friendly St.\",\r\n    \"city\": \"Windsor\",\r\n    \"telephone\": \"6085553198\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/owners/{{ownerid}}",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"owners",
+								"{{ownerid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 200;\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 2 :Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"    });\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"console.log(response);\r",
+									"console.log(response.length);\r",
+									"console.log(response['response.length']);\r",
+									"\r",
+									"pm.test(\"Test3 : Total No of pets registered  : \" +response.length , function () {\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.expect(jsonData.length).to.eql(response.length);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/pets",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPetById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 200;\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 3 :Response time is less than 1000ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"    });\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"console.log(response);\r",
+									"console.log(responseTime)\r",
+									"console.log(response['response.length']);\r",
+									"\r",
+									"pm.test(\"Test2 : How many milliseconds does the page respond in => \" +responseTime, function () {\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.expect(jsonData.length).to.eql(response.length);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/pets/14",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"pets",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addPet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 201;\r",
+									"pm.test(\"Test 1:Details updated, Response for update is 201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test2 :Page response time is less than 500ms\", function () { pm.expect(pm.response.responseTime).to.be.below(500); });\r",
+									"\r",
+									"var url = pm.environment.get(\"BaseUrl\") + \"/bookingid/\" +  pm.globals.get(\"\");\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) {  console.log(err);      }\r",
+									"    console.log(res);\r",
+									"\r",
+									"pm.test(\"Test 3 :All required Pet registration data that is provided is updated\", function () { pm.expect(res).to.not.eql(\"\");  });\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.globals.set(\"petID\", pm.response.json().petId);\r",
+									" \r",
+									"pm.test(\"The pet name is registered \", function () {\r",
+									"    pm.expect(jsonData.petName).to.eql(pm.variables.get(\"name\"));\r",
+									"});\r",
+									" \r",
+									" \r",
+									"pm.test(\"Verify that address of the Owner is correct \", function () {\r",
+									"    pm.expect(jsonData.address).to.not.eql(pm.variables.get(\"address\"));\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Verify that city in the Owner is correct \", function () {\r",
+									"    pm.expect(jsonData.city).to.not.eql(pm.variables.get(\"city\"));\r",
+									"});\r",
+									" \r",
+									"pm.test(\"Verify that telephone in the Owner is correct \", function () {\r",
+									"    pm.expect(jsonData.telephone).to.not.eql(pm.variables.get(\"mobilenumber\"));\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 14,\r\n    \"name\": \"kutribilli\",\r\n    \"birthDate\": \"2021/04/13\",\r\n    \"type\": {\r\n        \"id\": 2,\r\n        \"name\": \"dog\"\r\n    },\r\n    \"owner\": {\r\n        \"id\": 2,\r\n        \"firstName\": \"Manish\",\r\n        \"lastName\": \"Davis\",\r\n        \"address\": \"638 Cardinal Ave.\",\r\n        \"city\": \"Sun Prairie\",\r\n        \"telephone\": \"6085551749\"\r\n    },\r\n    \"visits\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/pets",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"pets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 204;\r",
+									"pm.test(\"Test 1:Status check Page response is  201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									" \r",
+									"pm.test(\"Test2 :Response time is less than 500ms\", function () { pm.expect(pm.response.responseTime).to.be.below(500); });\r",
+									" \r",
+									"var url = pm.environment.get(\"petclinicUrl\") + \"api/owners/\" +  parseInt(pm.environment.get(\"ownerid\"));\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET' };\r",
+									" \r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err); }\r",
+									"    console.log(res.firstName);\r",
+									" \r",
+									"    pm.test(\"Test 3: Verify that the json data is not empty\", function () { pm.expect(res).to.not.eql(\"\"); });\r",
+									" \r",
+									"    var jsonData = res.json();\r",
+									"    pm.test(\"Test 4: Check firstname is updated\", function () {\r",
+									"    pm.expect(jsonData.firstName).to.eql(pm.variables.get(\"firstname\"))\r",
+									"    });\r",
+									" \r",
+									"    pm.test(\"Test 5: Check lastname is updated\", function () {\r",
+									"    pm.expect(jsonData.lastName).to.eql(pm.variables.get(\"lastname\"))\r",
+									"    });\r",
+									" \r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 14,\r\n    \"name\": \"kutribilli\",\r\n    \"birthDate\": \"2021/04/13\",\r\n    \"type\": {\r\n        \"id\": 1,\r\n        \"name\": \"cat\"\r\n    },\r\n    \"owner\": {\r\n        \"id\": 2,\r\n        \"firstName\": \"Betty\",\r\n        \"lastName\": \"Davis\",\r\n        \"address\": \"638 Cardinal Ave.\",\r\n        \"city\": \"Sun Prairie\",\r\n        \"telephone\": \"6085551749\"\r\n    },\r\n    \"visits\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/pets/14",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"pets",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
