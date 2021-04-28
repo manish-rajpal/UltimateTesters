@@ -17,35 +17,7 @@ pipeline {
 				 
 			  }
     
-			/*stage('Robot') {
-					steps {
-							sleep(60)
-							sh 'robot --variable BROWSER:headlesschrome -d spring-petclinic-angular/Tests/Results spring-petclinic-angular/Tests/petclinic.robot spring-petclinic-angular/Tests/editOwnerAndPet.robot'
-						   
-							
-						}
-						post {
-							always {
-								script {
-									step(
-										[
-											$class                  :   'RobotPublisher',
-											outputPath              :   'spring-petclinic-angular/Tests/Results',
-											outputFileName          :   '**/output.xml',
-											reportFileName          :   '**/report.html',
-											logFileName             :   '**/log.html',
-											disableArchiveOutput    :   false,
-											passThreshold           :   100,
-											unstableThreshold       :   40,
-											otherFiles              :   "**/*.png,**/*.jpg",
-										]
-									)
-								}
-							}
-						}
-				 }*/
-			   
-				stage('newman') {
+			stage('newman') {
 						steps {
 						   sleep(30)
 							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json --reporters junit'
