@@ -15,7 +15,7 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"var status_code = 201;\r",
+									"var status_code = 404;\r",
 									"pm.test(\"Test 1:Status check Page response is  201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
 									"\r",
 									"\r",
