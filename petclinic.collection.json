@@ -23,7 +23,7 @@
 									"\r",
 									"\r",
 									"pm.test(\"Test2 :Response time is less than 500ms\", function () {\r",
-									"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1500);\r",
 									"    });"
 								],
 								"type": "text/javascript"
@@ -71,7 +71,7 @@
 									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
 									"\r",
 									"pm.test(\"Test 2 :Response time is less than 500ms\", function () {\r",
-									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1500);\r",
 									"    });\r",
 									"\r",
 									"const response = pm.response.json();\r",
@@ -136,7 +136,7 @@
 									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
 									"\r",
 									"pm.test(\"Test 3 :Response time is less than 1000ms\", function () {\r",
-									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1500);\r",
 									"    });\r",
 									"\r",
 									"const response = pm.response.json();\r",
