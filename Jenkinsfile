@@ -19,7 +19,7 @@ pipeline {
     
 			stage('newman') {
 						steps {
-						   //sleep(10)
+						   sleep(20)
 							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json --reporters junit'
 						}
 						post {
