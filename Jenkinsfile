@@ -14,6 +14,19 @@ pipeline {
 				  }
 				 
 			  }
+	  		stage('Newman') {
+						steps {
+						   sleep(20)
+							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json --reporters junit'
+							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json '
+						}
+						post {
+							always {
+									junit '**/*xml'
+								}
+							}
+
+					}
 		   	stage('Robot') {
 					steps {
 						sleep(60)
@@ -42,19 +55,7 @@ pipeline {
 						}
 				 }
     
-			stage('Newman') {
-						steps {
-						   sleep(20)
-							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json --reporters junit'
-							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json '
-						}
-						post {
-							always {
-									junit '**/*xml'
-								}
-							}
-
-					}
+			
 			   
 			   
 		   
