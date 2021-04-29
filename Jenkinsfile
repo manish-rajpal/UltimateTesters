@@ -1,7 +1,9 @@
-pipeline {
+ipeline {
   agent any
   stages {
-     	stage('Build Rest Api') {
+     stage('parallel') {
+           parallel {
+			stage('Build Rest Api') {
 			  steps {
 				   sh 'cd spring-petclinic-rest && nohup mvn spring-boot:run &'
 					
@@ -14,7 +16,35 @@ pipeline {
 				  }
 				 
 			  }
-	  		stage('Newman') {
+		   	stage('Robot') {
+					steps {
+						sleep(60)
+						sh 'robot --variable BROWSER:headlesschrome -d /RobotFrameWork/Results RobotFrameWork/Tests/Veterinarians.robot RobotFrameWork/Tests/owner.robot RobotFrameWork/Tests/special-types.robot'
+						   
+							
+						}
+						post {
+							always {
+								script {
+									step(
+										[
+											$class                  :   'RobotPublisher',
+											outputPath              :   'RobotFrameWork/Results',
+											outputFileName          :   '**/output.xml',
+											reportFileName          :   '**/report.html',
+											logFileName             :   '**/log.html',
+											disableArchiveOutput    :   false,
+											passThreshold           :   100,
+											unstableThreshold       :   40,
+											otherFiles              :   "**/*.png,**/*.jpg",
+										]
+									)
+								}
+							}
+						}
+				 }
+    
+			stage('Newman') {
 						steps {
 						   sleep(20)
 							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json --reporters junit'
@@ -27,9 +57,6 @@ pipeline {
 							}
 
 					}
-		   	
-    
-			
 			   
 			   
 		   
@@ -37,4 +64,5 @@ pipeline {
 		   
            }
 	}
-
+ }
+}
