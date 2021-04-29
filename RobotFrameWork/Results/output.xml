@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.9.4 on win32)" generated="20210428 13:22:13.631" rpa="false" schemaversion="2">
+<suite id="s1" name="Veterinarians" source="C:\Users\User\PycharmProjects\spring-petclinic-angular\RobotFrameWork\Tests\Veterinarians.robot">
+<test id="s1-t1" name="User Can Access The Web">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.701" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.701" endtime="20210428 13:22:13.701"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.699" endtime="20210428 13:22:13.701"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.703" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.703" endtime="20210428 13:22:13.703"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.704" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.704" endtime="20210428 13:22:13.704"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.706" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.706" endtime="20210428 13:22:13.706"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.701" endtime="20210428 13:22:13.706">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>Web users can access the web</doc>
+<tag>access</tag>
+<status status="FAIL" starttime="20210428 13:22:13.698" endtime="20210428 13:22:13.707">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t2" name="Verify Veterinarians Access and Query For All">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.711" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.710" endtime="20210428 13:22:13.711"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.709" endtime="20210428 13:22:13.711"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.714" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.714" endtime="20210428 13:22:13.714"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.716" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.716" endtime="20210428 13:22:13.717"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.719" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.719" endtime="20210428 13:22:13.719"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.711" endtime="20210428 13:22:13.719">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>users can access the Veterinarians to query and add pets</doc>
+<tag>veterinarians</tag>
+<status status="FAIL" starttime="20210428 13:22:13.708" endtime="20210428 13:22:13.720">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t3" name="Add Vets From All Qurey">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.726" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.725" endtime="20210428 13:22:13.726"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.722" endtime="20210428 13:22:13.727"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.729" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.729" endtime="20210428 13:22:13.729"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.731" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.730" endtime="20210428 13:22:13.731"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.732" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.732" endtime="20210428 13:22:13.732"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.727" endtime="20210428 13:22:13.732">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>users can add pets</doc>
+<tag>adding</tag>
+<status status="FAIL" starttime="20210428 13:22:13.721" endtime="20210428 13:22:13.732">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t4" name="Add Pet In Veterinarians Navigation">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.735" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.735" endtime="20210428 13:22:13.736"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.734" endtime="20210428 13:22:13.736"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.740" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.740" endtime="20210428 13:22:13.740"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.743" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.743" endtime="20210428 13:22:13.743"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.744" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.744" endtime="20210428 13:22:13.744"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.736" endtime="20210428 13:22:13.745">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>users can add pet in Veterinarians</doc>
+<tag>quick adding</tag>
+<status status="FAIL" starttime="20210428 13:22:13.733" endtime="20210428 13:22:13.745">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t5" name="Cancel Adding New Vet">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.768" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.768" endtime="20210428 13:22:13.769"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.766" endtime="20210428 13:22:13.769"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.771" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.771" endtime="20210428 13:22:13.771"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.774" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.773" endtime="20210428 13:22:13.774"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.775" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.775" endtime="20210428 13:22:13.775"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.769" endtime="20210428 13:22:13.776">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>users can cancel adding pets before comfirmation</doc>
+<tag>cancel adding</tag>
+<status status="FAIL" starttime="20210428 13:22:13.765" endtime="20210428 13:22:13.776">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t6" name="Edit Pet's Information">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.781" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.780" endtime="20210428 13:22:13.781"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.778" endtime="20210428 13:22:13.782"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.786" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.785" endtime="20210428 13:22:13.786"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.793" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.791" endtime="20210428 13:22:13.794"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.796" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.796" endtime="20210428 13:22:13.796"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.783" endtime="20210428 13:22:13.797">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>users can edit pet's information</doc>
+<tag>edit</tag>
+<status status="FAIL" starttime="20210428 13:22:13.777" endtime="20210428 13:22:13.797">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t7" name="Pet's Information Cancel">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.800" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.800" endtime="20210428 13:22:13.800"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.799" endtime="20210428 13:22:13.800"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.803" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.803" endtime="20210428 13:22:13.803"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.805" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.805" endtime="20210428 13:22:13.805"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.808" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.808" endtime="20210428 13:22:13.808"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.801" endtime="20210428 13:22:13.809">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>users can cancel editing pets</doc>
+<tag>cancel editing</tag>
+<status status="FAIL" starttime="20210428 13:22:13.798" endtime="20210428 13:22:13.810">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t8" name="Delete Specific Pet By Name">
+<kw name="Generate Tests" library="Keywords_Vet" type="SETUP">
+<kw name="Open Browser">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<msg timestamp="20210428 13:22:13.815" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.815" endtime="20210428 13:22:13.815"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.812" endtime="20210428 13:22:13.815"/>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="TEARDOWN">
+<kw name="Click Link">
+<arg>//*[@title="home page"]</arg>
+<msg timestamp="20210428 13:22:13.817" level="FAIL">No keyword with name 'Click Link' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.817" endtime="20210428 13:22:13.817"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<arg>Welcome to Petclinic</arg>
+<msg timestamp="20210428 13:22:13.819" level="FAIL">No keyword with name 'Wait Until Page Contains' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.819" endtime="20210428 13:22:13.819"/>
+</kw>
+<kw name="Close Browser">
+<msg timestamp="20210428 13:22:13.820" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20210428 13:22:13.820" endtime="20210428 13:22:13.820"/>
+</kw>
+<status status="FAIL" starttime="20210428 13:22:13.815" endtime="20210428 13:22:13.820">Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>users can delete pets by pet's name</doc>
+<tag>delete</tag>
+<status status="FAIL" starttime="20210428 13:22:13.812" endtime="20210428 13:22:13.821">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+Several failures occurred:
+
+1) No keyword with name 'Click Link' found.
+
+2) No keyword with name 'Wait Until Page Contains' found.
+
+3) No keyword with name 'Close Browser' found.</status>
+</test>
+<doc>UI testing in PetClinic by Robot Framework
+this is to test funcitionalities of Veterinarians -- Feng</doc>
+<status status="FAIL" starttime="20210428 13:22:13.634" endtime="20210428 13:22:13.834"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">access</stat>
+<stat pass="0" fail="1" skip="0">adding</stat>
+<stat pass="0" fail="1" skip="0">cancel adding</stat>
+<stat pass="0" fail="1" skip="0">cancel editing</stat>
+<stat pass="0" fail="1" skip="0">delete</stat>
+<stat pass="0" fail="1" skip="0">edit</stat>
+<stat pass="0" fail="1" skip="0">quick adding</stat>
+<stat pass="0" fail="1" skip="0">veterinarians</stat>
+</tag>
+<suite>
+<stat pass="0" fail="8" skip="0" id="s1" name="Veterinarians">Veterinarians</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210428 13:22:13.685" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\spring-petclinic-angular\RobotFrameWork\Resource\Keywords_Vet.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\AppData\Local\Programs\Python\Python39\Scripts\robot.exe
+  c:\users\user\appdata\local\programs\python\python39\python39.zip
+  c:\users\user\appdata\local\programs\python\python39\DLLs
+  c:\users\user\appdata\local\programs\python\python39\lib
+  c:\users\user\appdata\local\programs\python\python39
+  c:\users\user\appdata\local\programs\python\python39\lib\site-packages</msg>
+<msg timestamp="20210428 13:22:13.687" level="ERROR">Error in file 'C:\Users\User\PycharmProjects\spring-petclinic-angular\RobotFrameWork\Tests\Veterinarians.robot' on line 5: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\User\AppData\Local\Programs\Python\Python39\Scripts\robot.exe
+  c:\users\user\appdata\local\programs\python\python39\python39.zip
+  c:\users\user\appdata\local\programs\python\python39\DLLs
+  c:\users\user\appdata\local\programs\python\python39\lib
+  c:\users\user\appdata\local\programs\python\python39
+  c:\users\user\appdata\local\programs\python\python39\lib\site-packages</msg>
+</errors>
+</robot>
