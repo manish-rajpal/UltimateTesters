@@ -5,7 +5,7 @@ pipeline {
            parallel{
 		stage('Build Rest Api'){
 			  steps {
-				  sh 'cd petclinicrest && nohup mvn spring-boot:run &'
+				  sh 'cd spring-petclinic-rest && nohup mvn spring-boot:run &'
 				    }
 				} 
 			stage('Build Angular Server'){
