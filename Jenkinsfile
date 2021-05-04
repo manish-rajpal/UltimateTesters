@@ -5,7 +5,8 @@ pipeline {
            parallel {
 			stage('Build Rest Api') {
 			  steps {
-				   sh 'cd spring-petclinic-rest && nohup mvn spring-boot:run &'					
+				   sh 'cd spring-petclinic-rest && nohup mvn spring-boot:run &'	
+				  
 				  }
 				} 
 			stage('Build Angular Server') {
@@ -46,8 +47,7 @@ pipeline {
 						steps {
 						   sleep(20)
 							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json --reporters junit'
-							sh 'newman run  petclinic.collection.json --environment petclinic.environment.json '
-						}
+							}
 						post {
 							always {
 									junit '**/*xml'
@@ -55,11 +55,7 @@ pipeline {
 							}
 
 					}
-			   
-			   
-		   
-		   
-		   
+			   	   
            }
 	post {
         failure {
