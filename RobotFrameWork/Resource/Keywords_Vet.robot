@@ -4,6 +4,7 @@ Library     SeleniumLibrary
 *** Keywords ***
 Generate Tests
     Open Browser            about:blank     ${BROWSER}
+	
 
 # Access web page
 Go To Web
