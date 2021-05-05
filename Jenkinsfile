@@ -5,7 +5,7 @@ pipeline{
             parallel{
                  stage('APIServer'){
                             steps{
-				    sleep(40)
+
                                 sh 'cd spring-petclinic-rest && nohup mvn spring-boot:run &'
                             }
                 }
